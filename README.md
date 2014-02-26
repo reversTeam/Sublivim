@@ -1,7 +1,7 @@
 SubliVim
 ========
 
-![Sublivim](https://raw.github.com/reversTeam/Sublivim/triviere/Pictures/vim.jpg)
+![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
 
 Description et installation :
 -----------
