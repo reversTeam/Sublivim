@@ -14,7 +14,8 @@ Description et installation :
 7.	Theme molokai
 
 ### Installation ######
-
+1.	`git clone https://github.com/reversTeam/Sublivim.git`
+2.	`chmod +x installer.sh && ./installer.sh`
 
 
 Liste des raccourcis Clavier
