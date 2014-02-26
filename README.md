@@ -5,6 +5,7 @@ Configuration Sublime Text pour vim
 ------------
 
 ### En mode edition et normale : ######
+
 1.	Ctrl + c    => Copier
 2.	Ctrl + x    => Couper
 3.	Ctrl + v    => Coller
