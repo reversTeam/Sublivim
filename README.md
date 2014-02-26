@@ -14,6 +14,8 @@ Description et installation :
 5.	Visualisation facile et rapide des historiques de commandes
 6.	Autocompletion
 7.	Theme molokai
+8.	Gestion des switch plus simple
+9.	Gestion des onglet plus simple
 
 ### Installation ######
 1.	`git clone https://github.com/reversTeam/Sublivim.git`
@@ -24,25 +26,29 @@ Liste des raccourcis Clavier
 ------------
 
 ### Mode édition et normale : ######
-1.	Ctrl + c    => Copier
-2.	Ctrl + x    => Couper
-3.	Ctrl + v    => Coller
-4.	Ctrl + w    => Fermer sans engeristrer
-5.	Ctrl + u    => Aller en avant dans l'historique des modifications
+1.	Ctrl + c     => Copier
+2.	Ctrl + x     => Couper
+3.	Ctrl + v     => Coller
+4.	Ctrl + w     => Fermer sans engeristrer
+5.	Ctrl + u     => Aller en avant dans l'historique des modifications
 
 ### Mode normale : ######
-1.	Ctrl + d    => Split verticale
-2.	Maj + d     => Split horizontale
-3.	Ctrl + n    => Check Norminator
-4.	Tab         => Onglet suivant
-5.	Maj + Tab   => Onglet Précédent
-6.	Ctrl + r    => Rechargement du fichier
-7.	Ctrl + g    => Afficher/Cacher Dossiers
-8.	Ctrl + k    => Appel la regle make du Makefile
-9.	Ctrl + h    => Afficher/Cacher l'historique des modifications
-10.	Space Space => Afficher les config de vim
-11.	u           => Retourner en arriere dans l'historique des modifications
-12.	Ctrl + u    => Aller en avant dans l'historique des modifications
+1.	Ctrl + d     => Split verticale
+2.	Maj + d      => Split horizontale
+3.	Ctrl + n     => Check Norminator
+4.	Tab          => Onglet suivant
+5.	Maj + Tab    => Onglet Précédent
+6.	Ctrl + r     => Rechargement du fichier
+7.	Ctrl + g     => Afficher/Cacher Dossiers
+8.	Ctrl + k     => Appel la regle make du Makefile
+9.	Ctrl + h     => Afficher/Cacher l'historique des modifications
+10.	Space Space  => Afficher les config de vim
+11.	u            => Retourner en arriere dans l'historique des modifications
+12.	Ctrl + u     => Aller en avant dans l'historique des modifications
+13.	Maj + gauche => Switcher sur le split de gauche
+14.	Maj + droite => Switcher sur le split de droite
+15.	Maj + haut   => Switcher sur le split du haut
+16. Maj + bas    => Switcher sur le split du bas
 
 ### Liste des paquets installés ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
