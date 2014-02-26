@@ -1,11 +1,26 @@
 SubliVim
 ========
 
+Description et installation :
+-----------
+
+### Un vim avec quelques fonctionnalité sympa: ######
+1.	Verification des fautes basique de codage qui pourraient génée la compilations
+2.	Activation de quelques raccourcis claviers
+3.	Check de la norme en facile
+4.	Dossiers sur le coté
+5.	Visualisation facile et rappide des historiques de commandes
+6.	Autocompletion
+7.	Theme molokai
+
+### Installation ######
+
+
+
 Liste des raccourcis Clavier
 ------------
 
 ### En mode edition et normale : ######
-
 1.	Ctrl + c    => Copier
 2.	Ctrl + x    => Couper
 3.	Ctrl + v    => Coller
@@ -26,8 +41,7 @@ Liste des raccourcis Clavier
 11.	u           => Retourner en arriere dans l'historique des modifications
 12.	Ctrl + u    => Aller en avant dans l'historique des modifications
 
-Liste des paquets installés
-------------
+### Liste des paquets installés ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
 2.	[autocomplpop](https://github.com/othree/vim-autocomplpop)
 3.	[gundo](https://github.com/sjl/gundo.vim)
