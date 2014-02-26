@@ -1,7 +1,7 @@
 SubliVim
 ========
 
-Configuration Sublime Text pour vim
+Liste des raccourcis Clavier
 ------------
 
 ### En mode edition et normale : ######
