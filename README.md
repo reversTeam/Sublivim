@@ -26,6 +26,6 @@ Configuration Sublime Text pour vim
 11.	u           => Retourner en arriere dans l'historique des modifications
 12.	Ctrl + u    => Aller en avant dans l'historique des modifications
 
-Liste des paquets installer
+Liste des paquets installés
 ------------
 
