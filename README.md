@@ -6,17 +6,16 @@ SubliVim
 Description et installation :
 -----------
 
-### Un vim avec quelques fonctionnalitées supplémentaires : ######
-1.	Vérification de fautes de code qui pourraient génée la compilation
-2.	Activation de quelques raccourcis claviers
+### Un vim avec quelques fonctionnalités supplémentaires : ######
+1.	Vérification de fautes de code qui pourraient gêner la compilation
+2.	Activation de quelques raccourcis clavier
 3.	Check de la norme rapide et facile
-4.	Compilation sans quitter le vim
-5.	Dossiers sur le coté
-6.	Visualisation facile et rapide des historiques de commandes
-7.	Autocompletion
-8.	Theme molokai
-9.	Gestion des switch plus simple
-10.	Gestion des onglet plus simple
+4.	Dossiers sur le coté
+5.	Visualisation facile et rapide des historiques de commande
+6.	Autocompletion
+7.	Thème molokai
+8.	Gestion des switch plus simple
+9.	Gestion des onglets plus simple
 
 ### Installation ######
 1.	`git clone https://github.com/reversTeam/Sublivim.git`
@@ -30,21 +29,21 @@ Liste des raccourcis Clavier
 1.	Ctrl + c     => Copier
 2.	Ctrl + x     => Couper
 3.	Ctrl + v     => Coller
-4.	Ctrl + w     => Fermer sans engeristrer
+4.	Ctrl + w     => Fermer sans enregistrer
 5.	Ctrl + u     => Aller en avant dans l'historique des modifications
 
-### Mode normale : ######
-1.	Ctrl + d     => Split verticale
-2.	Maj + d      => Split horizontale
+### Mode normal : ######
+1.	Ctrl + d     => Split vertical
+2.	Maj + d      => Split horizontal
 3.	Ctrl + n     => Check Norminator
 4.	Tab          => Onglet suivant
 5.	Maj + Tab    => Onglet Précédent
 6.	Ctrl + r     => Rechargement du fichier
 7.	Ctrl + g     => Afficher/Cacher Dossiers
-8.	Ctrl + k     => Appel la regle make du Makefile
+8.	Ctrl + k     => Appeler la règle make du Makefile
 9.	Ctrl + h     => Afficher/Cacher l'historique des modifications
-10.	Space Space  => Afficher les config de vim
-11.	u            => Retourner en arriere dans l'historique des modifications
+10.	Space Space  => Afficher les configs de vim
+11.	u            => Retourner en arrière dans l'historique des modifications
 12.	Ctrl + u     => Aller en avant dans l'historique des modifications
 13.	Maj + gauche => Switcher sur le split de gauche
 14.	Maj + droite => Switcher sur le split de droite
