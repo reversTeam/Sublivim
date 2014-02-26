@@ -28,16 +28,16 @@ Liste des raccourcis Clavier
 
 Liste des paquets installés
 ------------
-1.	addon_mw_utils
-2.	autocomplpop
-3.	gundo
-4.	nerdcommenter
-5.	nerdtree
-6.	powerline
-7.	snipmate
-8.	snippets
-9.	surround
-10.	syntastic
-11.	tlib
-12.	tube
-13.	twig
+1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
+2.	[autocomplpop](https://github.com/othree/vim-autocomplpop)
+3.	[gundo](https://github.com/sjl/gundo.vim)
+4.	[nerdcommenter](https://github.com/scrooloose/nerdcommenter)
+5.	[nerdtree](https://github.com/scrooloose/nerdtree)
+6.	[powerline](https://github.com/Lokaltog/powerline)
+7.	[snipmate](https://github.com/garbas/vim-snipmate)
+8.	[snippets](https://github.com/honza/vim-snippets)
+9.	[surround](https://github.com/tpope/vim-surround)
+10.	[syntastic](https://github.com/scrooloose/syntastic)
+11.	[tlib](https://github.com/tomtom/tlib_vim)
+12.	[tube](https://github.com/gcmt/tube.vim)
+13.	[twig](https://github.com/lunaru/vim-twig)
