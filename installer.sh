@@ -2,8 +2,10 @@
 SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
 HAS_ALIAS_SUBLIVIM=`cat $SHELL_ACTIVE | grep "#### ALIAS SUBLIVIM V.0 ####"`
 
-echo "Sauvegarde de vos anciennes configuration Vim : ~/old-conf-vim.tar"
-(cd && tar -cf old-conf-vim.tar .vim .vimrc && rm -rf .vim .vimrc)
+if [[ -d $HOME/.vim && -f $HOME/.vimrc ]]; then
+	echo "Sauvegarde de vos anciennes configuration Vim : ~/old-conf-vim.tar"
+	(cd && tar -cf old-conf-vim.tar .vim .vimrc && rm -rf .vim .vimrc)
+fi
 
 echo "Installation du Sublivim"
 tar -xf sv.tar && mv .vimrc ~/ && mv .vim ~/
