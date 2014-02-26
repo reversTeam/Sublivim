@@ -19,13 +19,13 @@ cat ~/.norminator | tail -n 1 | cut -d ' ' -f 8- >> ~/.norminator_bis
 mv ~/.norminator_bis ~/.norminator
 chmod 444 ~/.norminator
 
-if [[ -z "$HAS_ALIAS_SUBLIVIM" ]]; then
+if [ -z "$HAS_ALIAS_SUBLIVIM" ]; then
 	echo "Ajout des commentaires nécessaire au bon fonctionnement du Sublivim"
 	echo "#### ALIAS SUBLIVIM V.0 ####" >> ~/.zshrc
 	echo 'alias emacs="vim"' >> ~/.zshrc
 	echo 'alias vi="vim"' >> ~/.zshrc
-	echo 'alias vim="vim -C NERDTreeToogle"' >> ~/.zshrc
-	echo 'alias norminator=\"~/.vim/shells/norminator"' >> ~/.zshrc
+	echo 'alias vim="vim -c NERDTreeToggle"' >> ~/.zshrc
+	echo 'alias norminator="~/.vim/shells/norminator"' >> ~/.zshrc
 	echo 'alias -s py="vim"' >> ~/.zshrc
 	echo 'alias -s php="vim"' >> ~/.zshrc
 	echo 'alias -s c="vim"' >> ~/.zshrc
