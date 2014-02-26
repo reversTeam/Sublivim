@@ -18,7 +18,7 @@ Description et installation :
 ### Installation ######
 1.	`git clone https://github.com/reversTeam/Sublivim.git`
 2.	`chmod +x installer.sh && ./installer.sh`
-3.	`source ~/.\`basename $SHELL\`rc`
+3.	`source ~/.zshrc`
 
 Liste des raccourcis Clavier
 ------------
