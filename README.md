@@ -10,12 +10,13 @@ Description et installation :
 1.	Vérification de fautes de code qui pourraient génée la compilation
 2.	Activation de quelques raccourcis claviers
 3.	Check de la norme rapide et facile
-4.	Dossiers sur le coté
-5.	Visualisation facile et rapide des historiques de commandes
-6.	Autocompletion
-7.	Theme molokai
-8.	Gestion des switch plus simple
-9.	Gestion des onglet plus simple
+4.	Compilation sans quitter le vim
+5.	Dossiers sur le coté
+6.	Visualisation facile et rapide des historiques de commandes
+7.	Autocompletion
+8.	Theme molokai
+9.	Gestion des switch plus simple
+10.	Gestion des onglet plus simple
 
 ### Installation ######
 1.	`git clone https://github.com/reversTeam/Sublivim.git`
