@@ -6,31 +6,31 @@ SubliVim
 Description et installation :
 -----------
 
-### Un vim avec quelques fonctionnalité sympa: ######
-1.	Verification des fautes basique de codage qui pourraient génée la compilations
+### Un vim avec quelques fonctionnalitées sympa: ######
+1.	Vérification de fautes de code qui pourraient génée la compilation
 2.	Activation de quelques raccourcis claviers
-3.	Check de la norme en facile
+3.	Check de la norme rapide et facile
 4.	Dossiers sur le coté
-5.	Visualisation facile et rappide des historiques de commandes
+5.	Visualisation facile et rapide des historiques de commandes
 6.	Autocompletion
 7.	Theme molokai
 
 ### Installation ######
 1.	`git clone https://github.com/reversTeam/Sublivim.git`
 2.	`chmod +x installer.sh && ./installer.sh`
-
+3.	`source ~/.`basename $SHELL`rc`
 
 Liste des raccourcis Clavier
 ------------
 
-### En mode edition et normale : ######
+### Mode édition et normale : ######
 1.	Ctrl + c    => Copier
 2.	Ctrl + x    => Couper
 3.	Ctrl + v    => Coller
 4.	Ctrl + w    => Fermer sans engeristrer
 5.	Ctrl + u    => Aller en avant dans l'historique des modifications
 
-### En mode normale : ######
+### Mode normale : ######
 1.	Ctrl + d    => Split verticale
 2.	Maj + d     => Split horizontale
 3.	Ctrl + n    => Check Norminator
