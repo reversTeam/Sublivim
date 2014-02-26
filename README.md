@@ -28,4 +28,16 @@ Liste des raccourcis Clavier
 
 Liste des paquets installés
 ------------
-
+1.	addon_mw_utils
+2.	autocomplpop
+3.	gundo
+4.	nerdcommenter
+5.	nerdtree
+6.	powerline
+7.	snipmate
+8.	snippets
+9.	surround
+10.	syntastic
+11.	tlib
+12.	tube
+13.	twig
