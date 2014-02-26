@@ -35,20 +35,21 @@ Liste des raccourcis Clavier
 ### Mode normal : ######
 1.	Ctrl + d     => Split vertical
 2.	Maj + d      => Split horizontal
-3.	Ctrl + n     => Check Norminator
-4.	Tab          => Onglet suivant
-5.	Maj + Tab    => Onglet Précédent
-6.	Ctrl + r     => Rechargement du fichier
-7.	Ctrl + g     => Afficher/Cacher Dossiers
-8.	Ctrl + k     => Appeler la règle make du Makefile
-9.	Ctrl + h     => Afficher/Cacher l'historique des modifications
-10.	Space Space  => Afficher les configs de vim
-11.	u            => Retourner en arrière dans l'historique des modifications
-12.	Ctrl + u     => Aller en avant dans l'historique des modifications
-13.	Maj + gauche => Switcher sur le split de gauche
-14.	Maj + droite => Switcher sur le split de droite
-15.	Maj + haut   => Switcher sur le split du haut
-16. Maj + bas    => Switcher sur le split du bas
+3.	Ctrl + t     => Nouvelle onglet
+4.	Ctrl + n     => Check Norminator
+5.	Tab          => Onglet suivant
+6.	Maj + Tab    => Onglet Précédent
+7.	Ctrl + r     => Rechargement du fichier
+8.	Ctrl + g     => Afficher/Cacher Dossiers
+9.	Ctrl + k     => Appeler la règle make du Makefile
+10.	Ctrl + h     => Afficher/Cacher l'historique des modifications
+11.	Space Space  => Afficher les configs de vim
+12.	u            => Retourner en arrière dans l'historique des modifications
+13.	Ctrl + u     => Aller en avant dans l'historique des modifications
+14.	Maj + gauche => Switcher sur le split de gauche
+15.	Maj + droite => Switcher sur le split de droite
+16.	Maj + haut   => Switcher sur le split du haut
+17. Maj + bas    => Switcher sur le split du bas
 
 ### Liste des paquets installés ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
