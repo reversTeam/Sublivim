@@ -18,9 +18,7 @@ Description et installation :
 9.	Gestion des onglets plus simple
 
 ### Installation ######
-1.	`git clone https://github.com/reversTeam/Sublivim.git`
-2.	`./installer.sh`
-3.	`source ~/.zshrc`
+1.	`git clone https://github.com/reversTeam/Sublivim.git && cd SubliVim && ./installer.sh && source ~/.zshrc`
 
 Liste des raccourcis Clavier
 ------------
