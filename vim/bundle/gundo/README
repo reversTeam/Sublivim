@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3304
+
+Gundo is a Vim plugin for visualizing your undo tree to make it usable.
+
+Go to the site for more information: http://sjl.bitbucket.org/gundo.vim/
+
+Requirements: Vim 7.3+ with Python 2.4+ support.

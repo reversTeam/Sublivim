@@ -1,0 +1,400 @@
+*tube.txt* *tube*
+
+                                   Tube
+                MacVim and iTerm or Terminal interaction made easy
+
+                                     ~
+                              Reference Manual
+
+==============================================================================
+CONTENTS                                                       *tube-contents*
+
+        1. Overview ..............................|tube-overview|
+        2. Visual Tour ...........................|tube-visual-tour|
+        3. Commands ..............................|tube-commands|
+        4. Settings ..............................|tube-settings|
+        5. Changelog .............................|tube-changelog| 
+        6. Credits ...............................|tube-credits|
+        7. License ...............................|tube-license|
+
+
+==============================================================================
+1. Overview                                                    *tube-overview*
+
+
+This plugin provides a tiny interface for sending commands from MacVim to a
+separate iTerm or Terminal window without leaving MacVim.  
+
+    eg. :Tube cd .. & python run_tests.py
+
+This execute the given command (the whole string after :Tube) in a separate
+terminal window mantaining the focus on the MacVim window. 
+
+
+==============================================================================
+2. Visual Tour                                                   *visual-tour*
+
+
+A simple example
+------------------------------------------------------------------------------
+                 focus remains here
+ MacVim         /                                     Terminal
+---------------°---------------------                -------------------------------------
+| # hello_world.py                  |                | ...                               |
+|                                   |                | $ ls                              |
+| print "Hello World!"              |                | hello_world.py                    |
+|                                   |        ------> | $ python hello_world.py           |
+|                                   |       |        | Hello World!                      |
+|___________________________________|       |        |                                   |
+|:Tube python %                     |-------'        |                                   |
+--------------°----------------------                -------------------------------------
+               \
+                The % character stands for the current buffer name. If you want
+                no expansion at all, just escape it with another % character (%%).
+                Note the absence of quotes around the command.
+
+
+Selection injection
+------------------------------------------------------------------------------
+                 focus remains here
+ MacVim         /                                     Terminal
+---------------°---------------------                -------------------------------------
+| # hello_world.py                  |                | ...                               |
+|                                   |                | $ python                          |
+| print "this is a selected line"   |        ------> | >>> print "this is a selected.. " |
+|                                   |       |        | this is a selected line           |
+|                                   |       |        |                                   |
+|___________________________________|       |        |                                   |
+|:'<,'>Tube @                       |-------'        |                                   |
+-------------°-----------------------                -------------------------------------
+              \
+               The @ character stand for the current selection. If you just happen to be
+               on a line in normal mode then the @ character stands for the current
+               line (in this case you'll use the plain :Tube @). If the selection spans
+               multiple lines they are passed to the terminal as they are, that is,
+               whitespaces are preserved.
+
+
+Function injection
+------------------------------------------------------------------------------
+                       focus remains here
+ MacVim               /                               MacVim (invisible state)
+---------------------°---------------                ....................................
+|                                   |                .                                  .
+|                                   |                .                                  .
+| // beautifully crafted code       |                . // beautifully crafted code      .
+|                                   | -------------> .                                  .
+|                                   |                .                                  .
+|___________________________________|                ....................................
+|:Tube cd #{Foo(1^^'@')} && do sth  |          _____ |:Tube cd project_root && do sth   |
+--------------|---°------------------         |      ....................................
+              |    \_____________________     |
+ Your .vimrc  |                          |    |       Terminal
+--------------|----------------------    |    |      ------------------------------------
+|                                   |    |    `----> | $ cd project_root && do sth      |
+| fu! Foo(arg1, arg2)               |    |           | ...                              |
+|  // really heavy computation      |    |           |                                  |
+|  return "project_root"            |    |           |                                  |
+| endfu                             |    |           |                                  |
+|                                   |    |           |                                  |
+-------------------------------------    |           ------------------------------------
+                                         |
+              __________________________/ \__________________________
+             /                                                       \
+   In this example we used the special            As you can see only string arguments require
+   character @ as one of the arguments.           quotes. Also, you do not have to bother about
+   Doing so we pass the selection right           escaping yourself the string since it's done
+   into the function as a normal argument         automatically for you. 
+   (note the quotes). This might be useful        
+   if you need to perform some kind of            Note the awkward ^^ arguments separator. Since            
+   formatting on the selection before             you are not required to escape yourself the
+   passing it to the function.                    arguments (since they might come from an arbitrary
+                                                  selection and injected via the @ character) there
+                                                  is no way to determine where an arguments start or 
+                                                  end. Commas just don't fit as separator since they
+                                                  are so common, so I picked up a sequence of characters
+                                                  scarcely used (at least by the author). You can change 
+                                                  the separator sequence via the |'tube_funargs_separator'|
+                                                  setting.
+
+You can see some useful examples of function injection further in the ducumentation.
+
+
+Aliasing
+------------------------------------------------------------------------------
+                       focus remains here
+ MacVim               /                               MacVim (invisible state)
+---------------------°---------------                ....................................
+| // a very                         |                . // a very                        .
+| // long long                      |                . // long long                     .
+| // paragraph                      |                . // paragraph                     .
+| // is selected                    | -------------> . // is selected                   .
+| ...                               |                . ...                              .
+|___________________________________|                ....................................
+|:'<,'>TubeAlias cmd                |          _____ |:Tube make etc                    |
+---------------|--°------------------         |      ....................................
+               |   \_____________________     |
+ Your .vimrc   |                         |    |       Terminal
+---------------|---------------------    |    |      ------------------------------------
+|                                   |    |    `----> | $ make etc                        |
+| let g:tube_aliases = {            |    |           | ...                               |
+|  \'cmd':'#{Format("@")} | do sth' |    |           |                                   |
+|  \}                               |    |           |                                   |
+|                                   |    |           |                                   |
+--------°-----------°----------------    |           -------------------------------------
+        |            \____________________\
+        |                                   Selection, function and buffer injection
+      You can define aliases in your        still work with aliasing.                
+      .vimrc file or at runtime. Keep        
+      in mind that in the latter case
+      you'll lose those aliases once 
+      you quit MacVim.
+
+
+==============================================================================
+3. Commands                                                    *tube-commands*
+
+
+------------------------------------------------------------------------------
+:Tube                                                                   *Tube*
+
+Execute the command in the separate iTerm (or Terminal) window. If the that
+window does not exist yet, then it is created. If no command is given the
+window is simply created, or cleared if it already exists. By default the
+window focus remains on MacVim but you can customize this behavior with
+the |'tube_run_command_background'| setting. Note that you do'nt have to wrap
+the command into quotes.
+
+Some character as a special meaning inside the command. Those chracters are
+`%`, `#{..}`, `@` and inform **Tube** that it has to inject some kind of
+information into the command:
+
+    * `%`: inject the current buffer name
+
+    * `@`: inject the current selection or the current line if there is no 
+      selected text. Note that block selection is not supported.
+
+    * `#{FunctionName(arg1, .., argn)}`: inject the return value of the user 
+      function named FunctionName. String arguments need to be wrapped with 
+      single or double quotes but you don't need to bother about escaping 
+      quotes in your string: it's done automatically for you. Another nicety
+      is that you can use the special characters `%` and `@` even as arguments
+      of the function. Just remember to wrap the with quotes too.
+
+NOTE: if you need a plain `%` or `@` character in your command just append
+    the same character twice, respectively `%%` and `@@`
+
+
+------------------------------------------------------------------------------
+:TubeClr                                                             *TubeClr*
+    
+As the |Tube| command but force the terminal to clear its screen before
+executing the command. Under the hood it appends a `clear` command before
+the main command.         
+
+
+------------------------------------------------------------------------------
+:TubeLastCmd                                                     *TubeLastCmd*
+
+Execute the last executed command.
+
+
+------------------------------------------------------------------------------
+:TubeInterrupt                                                 *TubeInterrupt* 
+
+Interrupt the current running command in the terminal window. Under the hood
+this sends the Ctrl-C command.
+
+
+------------------------------------------------------------------------------
+:TubeCd                                                               *TubeCd* 
+
+Execute a `cd 'vim current working directory'` command in the terminal window.
+
+
+------------------------------------------------------------------------------
+:TubeClose                                                         *TubeClose* 
+
+Close the terminal window.
+
+
+------------------------------------------------------------------------------
+:TubeAlias                                                         *TubeAlias*
+
+Execute the command associated with the given alias name. The alias might be
+defined in the `.vimrc` file via the |'tube_aliases'| setting or at run time
+via the |TubeAddAlias| command.             
+
+
+------------------------------------------------------------------------------
+:TubeAliasClr                                                   *TubeAliasClr*
+
+As the |TubeAlias| command but force the terminal to clear its screen before
+executing the command associated with the alias. 
+
+
+------------------------------------------------------------------------------
+:TubeAliases                                                     *TubeAliases* 
+
+Show all defined aliases.
+
+
+
+==============================================================================
+4. Settings                                                    *tube-settings*
+
+
+------------------------------------------------------------------------------
+                                                             *'tube_terminal'* 
+
+Use this setting to set the terminal emulator of your choice. At the moment
+only iTerm and Terminal are supported.
+
+Default: 'terminal' (values: 'iterm' or 'terminal')
+
+------------------------------------------------------------------------------
+                                                  *'tube_always_clear_screen'* 
+
+Setting this to 0 forces the terminal to clear its screen whenever
+a command is executed. You can toggle this setting on or off with the
+TubeToggleClearScreen command.
+
+Default: 0
+
+------------------------------------------------------------------------------
+                                                              *'tube_aliases'* 
+
+With this dictionary you can set your own aliases for commands. Just use the
+alias name as the dictionary key and the string command as the value. Be sure
+to have unique aliases. Special characters (`%`, `@` and `#{..}`) are supported.
+
+Default: {}
+
+Example:
+>
+    let g:tube_aliases = {'alias': 'cd project_root; ./run_tests'}
+<
+
+------------------------------------------------------------------------------
+                                                    *'tube_bufname_expansion'* 
+
+Set this variable to 1 and every `%` character in your commands will be
+replaced with the current buffer name (its absolute path). If you need the just
+the `%` character use the `%%` sequence. You can toggle the setting on or off
+with the TubeToggleBufnameExp command.
+
+Default: 1
+
+------------------------------------------------------------------------------
+                                                   *'tube_function_expansion'* 
+
+Set this variable to 1 to enable function expansion. Every 
+`#{FunctionName(arg1, .., argn)}` string inside commands will be replaced with 
+the return value of `FunctionName(arg1, .., argn)` function defined by the user.
+
+Default: 1       
+
+------------------------------------------------------------------------------
+                                                  *'tube_selection_expansion'* 
+
+Set this variable to 1 to enable selection expansion. Every `@` character
+inside commands will be replaced with the current selection. In order to get
+the current selection you must use a Tube command the way you usually do with
+vim commands: `:'<,'>Tube command`. If no selection is found, then the current
+line is taken.
+
+Default: 1   
+
+------------------------------------------------------------------------------
+                                                    *'tube_funargs_separator'* 
+
+This variable let you define your own preferred characters sequence to 
+separate arguments of injected function. The default string has been selected
+because of its rare usage by the plugin author. You can change that as long as
+you don't use your separator sequence in arguments.
+
+Default '^^'
+
+
+==============================================================================
+5. Changelog                                                  *tube-changelog*
+
+0.5
+    
+- Removed options: `tube_enable_shortcuts`, `tube_run_command_background`.
+- Removed commands: `TubeToggleClearScreen`
+
+0.4
+
+- Commands removed: `ToggleBufnameExp`, `ToggleFunctionExp`, `ToggleSelectionExp`, 
+    `RemoveAlias`, `AddAlias`, `RemoveAllAliases`, `ReloadAliases`. 
+- Commands renamed: `TubeClear` to `TubeClr`, `TubeAliasClear` to `TubeAliasClr`, 
+    `TubeLastCommand` to `TubeLastCmd`, `TubeInterruptCommand` to `TubeInterrupt`.
+
+0.3.1
+
+- Fixed commas-related problems when passing arguments to injected function. 
+    Now to separate arguments is required the special sequence '^^'.
+- Added `tube_funargs_separator` setting to let the user define its own
+    preferred characters sequence to separate arguments of injected function.
+- Fixed escaping for the '$' character.
+
+0.3
+
+- New feature: selection injection into the command with the @ character.
+- New feature: injected functions accept arguments.
+- `tube_at_character_expansion` setting renamed to `tube_bufname_expansion`.
+- TubeToggleExpandPercent command renamed to TubeToggleBufnameExp.
+- TubeToggleExpandFunction command renamed to TubeToggleFunctionExp.
+- Added shortcuts for most important commands (disabled by default).
+- Added `tube_enable_shortcuts` setting.
+- Added `tube_selection_expansion` setting.
+- Added TubeToggleSelectionExp command.
+- Fixed backslash escaping in commands.
+- Minor bug fixes.
+
+0.2.1
+
+- Fix plugin feedback
+
+0.2
+
+- New feature: the result of a custom vim function can be injected into the
+    command with the special notation #{CustomFunction}.
+- Minor bug fixes.
+
+0.1
+
+- First release.
+
+
+==============================================================================
+6. Credits                                                      *tube-credits*
+
+Author: Giacomo Comitti
+Contributors: https://github.com/gcmt/tube.vim/contributors
+Git repository: https://github.com/gcmt/tube.vim
+
+
+==============================================================================
+7. License                                                      *tube-license*
+
+Copyright (c) 2013 Giacomo Comitti
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

@@ -9,7 +9,7 @@ if [ -d $HOME/.vim ] && [ -f $HOME/.vimrc ]; then
 fi
 
 echo "Installation du Sublivim"
-cp -p .vimrc ~/ && cp -Rp .vim ~/
+cp -p .vimrc ~/ && cp -Rp vim ~/.vim
 
 echo "Connexion a Norminator"
 ~/.vim/shells/norminator --auth
