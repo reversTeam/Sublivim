@@ -16,6 +16,7 @@ Description et installation :
 7.	Thème molokai
 8.	Gestion des switch plus simple
 9.	Gestion des onglets plus simple
+10.	Gestion du multi-cursors
 
 ### Installation ######
 1.	`git clone https://github.com/reversTeam/Sublivim.git && cd SubliVim && ./installer.sh && source ~/.zshrc`
@@ -29,6 +30,11 @@ Liste des raccourcis Clavier
 3.	Ctrl + v     => Coller
 4.	Ctrl + w     => Fermer sans enregistrer
 5.	Ctrl + u     => Aller en avant dans l'historique des modifications
+6.	F6           => Entrer en mode Multi-cursors
+7.	Ctrl + d     => Multi-cursors : Occuence suivante
+8.	Ctrl + p     => Multi-cursors : Occurence précédente
+9.	Ctrl + m     => Multi-cursors : Sauté l'occurence
+10.	Echap        => Multi-cursors : Quitter le mode Multi-cursors
 
 ### Mode normal : ######
 1.	Ctrl + d     => Split vertical
@@ -48,6 +54,7 @@ Liste des raccourcis Clavier
 15.	Maj + droite => Switcher sur le split de droite
 16.	Maj + haut   => Switcher sur le split du haut
 17. Maj + bas    => Switcher sur le split du bas
+18. Ctrl + p     => Lockscreen (~/.vim/.msg_lockscreen)
 
 ### Liste des paquets installés ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
