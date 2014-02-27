@@ -12,7 +12,6 @@ tar -xf sv.tar && mv .vimrc ~/ && mv .vim ~/
 
 if [ -z "$HAS_ALIAS_SUBLIVIM" ]; then
 	echo "Téléchargement de norminator"
-	chmod +x ~/.vim/shells/norminator
 	~/.vim/shells/norminator --auth
 
 	cat ~/.norminator | head -n 1 > ~/.norminator_bis
