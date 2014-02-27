@@ -31,9 +31,9 @@ Liste des raccourcis Clavier
 4.	Ctrl + w     => Fermer sans enregistrer
 5.	Ctrl + u     => Aller en avant dans l'historique des modifications
 6.	F6           => Entrer en mode Multi-cursors
-7.	Ctrl + d     => Multi-cursors : Occuence suivante
-8.	Ctrl + p     => Multi-cursors : Occurence précédente
-9.	Ctrl + m     => Multi-cursors : Sauté l'occurence
+7.	Ctrl + d     => Multi-cursors : Occurrence suivante
+8.	Ctrl + p     => Multi-cursors : Occurrence précédente
+9.	Ctrl + m     => Multi-cursors : Sauté l'occurrence
 10.	Echap        => Multi-cursors : Quitter le mode Multi-cursors
 
 ### Mode normal : ######
