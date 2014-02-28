@@ -70,3 +70,4 @@ Liste des raccourcis Clavier
 11.	[tlib](https://github.com/tomtom/tlib_vim)
 12.	[tube](https://github.com/gcmt/tube.vim)
 13.	[twig](https://github.com/lunaru/vim-twig)
+14.	[multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
