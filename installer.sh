@@ -40,5 +40,3 @@ if [ -z "$HAS_ALIAS_SUBLIVIM" ]; then
 	echo 'alias -s html="vim"' >> ~/.zshrc
 	echo "#### END ALIAS SUBLIVIM ####" >> ~/.zshrc
 fi
-
-vim ~/.vim/.msg_lockscreen
