@@ -54,7 +54,7 @@ Liste des raccourcis Clavier
 15.	Maj + droite => Switcher sur le split de droite
 16.	Maj + haut   => Switcher sur le split du haut
 17. Maj + bas    => Switcher sur le split du bas
-18. Ctrl + p     => Lockscreen (~/.vim/.msg_lockscreen)
+18. Ctrl + p     => Lancement du lock session
 
 ### Liste des paquets installés ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
