@@ -56,7 +56,6 @@ noremap <C-g>				:NERDTreeToggle<CR>
 
 inoremap <C-w>				<Esc>:q!<CR>
 inoremap <C-k>				<Esc>:help key-notation<CR>
-inoremap <C-r>				<Esc>:NERDTreeToggle<CR>
 inoremap <C-t>				<Esc>:tabedit 
 
 noremap <S-Right>			<C-w><Right>
