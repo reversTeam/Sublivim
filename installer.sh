@@ -1,7 +1,11 @@
 #!/bin/sh
 SV_VERSION="0"
 SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
+
 HAS_ALIAS_SUBLIVIM=`cat $SHELL_ACTIVE | grep "#### ALIAS SUBLIVIM V.$SV_VERSION ####"`
+
+git clone https://github.com/reversTeam/Sublivim.git
+cd Sublivim
 
 if [ -d $HOME/.vim ] && [ -f $HOME/.vimrc ]; then
 	echo "Sauvegarde de vos anciennes configurations Vim : ~/old-conf-vim.tar"
@@ -20,3 +24,6 @@ if [ -z "$HAS_ALIAS_SUBLIVIM" ]; then
 	echo 'alias vim="vim -c NERDTreeToggle"' >> ~/.zshrc
 	echo "#### END ALIAS SUBLIVIM ####" >> ~/.zshrc
 fi
+
+cd ../
+rm -rf Sublivim
