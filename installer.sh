@@ -27,3 +27,5 @@ fi
 
 cd ../
 rm -rf Sublivim
+
+source ~/.zshrc

@@ -19,7 +19,7 @@ Description et installation :
 10.	Gestion du multi-cursors
 
 ### Installation ######
-1.	`git clone https://github.com/reversTeam/Sublivim.git && cd Sublivim && ./installer.sh && source ~/.zshrc`
+1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
 
 Liste des raccourcis Clavier
 ------------
