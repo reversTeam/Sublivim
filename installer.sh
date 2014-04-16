@@ -4,7 +4,7 @@ SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
 
 cd ~
 if [ -d $HOME/.Sublivim ]; then
-	echo "Mise a jour du Sublivim"
+	echo "Mise a jour du Sublivim" > /dev/null
 	(cd .Sublivim && git pull > /dev/null 2> /dev/null &)
 else
 	echo "Clone du depot"
