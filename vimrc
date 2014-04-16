@@ -85,7 +85,7 @@ autocmd VimEnter * call s:actionForOpen()
 function! s:actionForOpen()
 	let filename = expand('%:t')
 	NERDTree
-	!( cd ~/42/Sublivim/ && pull)
+	!( cd ~/.Sublivim/ && pull)
 	if !empty(filename)
 		wincmd l
 	endif
