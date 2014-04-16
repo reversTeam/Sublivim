@@ -5,7 +5,7 @@ SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
 cd ~
 if [ -d $HOME/.Sublivim ]; then
 	echo "Mise a jour du Sublivim"
-	(cd .Sublivim && git pull)
+	(cd .Sublivim && git pull > /dev/null)
 else
 	echo "Clone du depot"
 	git clone https://github.com/reversTeam/Sublivim.git .Sublivim
@@ -20,5 +20,4 @@ else
 	ln -s .Sublivim/vimrc ~/.vimrc 
 	ln -s .Sublivim/vim ~/.vim
 fi
-echo "Installation Terminée"
 cd - > /dev/null
