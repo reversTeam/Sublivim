@@ -1,5 +1,6 @@
 set nocompatible
 
+
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
@@ -18,6 +19,8 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-l>'
 let g:multi_cursor_quit_key='<Esc>'
 let g:multi_cursor_start_key='<F6>'
+
+let g:current_path_for_nerd_init=expand('%:p:h')
 
 call pathogen#infect()
 call pathogen#helptags()
@@ -74,7 +77,29 @@ noremap <C-v>				p
 noremap <C-c>				y
 noremap <C-x>				x
 
+set autochdir
+
 set backspace=indent,eol,start
+
+autocmd VimEnter * call s:actionForOpen()
+function! s:actionForOpen()
+	let filename = expand('%:t')
+	NERDTree
+	if !empty(filename)
+		wincmd l
+	endif
+endfunction
+
+autocmd BufCreate * call s:addingNewTab()
+function! s:addingNewTab()
+	let filename = expand('%:t')
+	if winnr('$') < 2 && exists('t:NERDTreeBufName') == 0
+		NERDTree
+		if !empty(filename)
+			wincmd l
+		endif
+	endif
+endfunction
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 function! s:CloseIfOnlyNerdTreeLeft()
