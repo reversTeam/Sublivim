@@ -20,4 +20,5 @@ else
 	ln -s .Sublivim/vimrc ~/.vimrc 
 	ln -s .Sublivim/vim ~/.vim
 fi
+echo "Installation Terminée"
 cd - > /dev/null
