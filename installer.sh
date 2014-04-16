@@ -3,7 +3,7 @@ SV_VERSION="0"
 SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
 
 cd ~
-if [ -d $HOME/.Sublivim ]
+if [ -d $HOME/.Sublivim ]; then
 	(cd .Sublivim && git pull)
 else
 	git clone https://github.com/reversTeam/Sublivim.git .Sublivim
