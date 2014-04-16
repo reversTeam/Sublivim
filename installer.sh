@@ -4,8 +4,10 @@ SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
 
 cd ~
 if [ -d $HOME/.Sublivim ]; then
+	echo "Mise a jour du Sublivim"
 	(cd .Sublivim && git pull)
 else
+	echo "Clone du depot"
 	git clone https://github.com/reversTeam/Sublivim.git .Sublivim
 
 	if [ -d $HOME/.vim ] && [ -f $HOME/.vimrc ]; then
