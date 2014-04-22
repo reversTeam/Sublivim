@@ -1,6 +1,5 @@
 set nocompatible
 
-
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
@@ -69,11 +68,11 @@ noremap <S-Down>			<C-w><Down>
 inoremap <C-v>				<Esc>pi
 inoremap <C-c>				<Esc>yi
 inoremap <C-x>				<Esc>xi
-inoremap <C-a>				<Esc>gg<S-v>G
 inoremap <C-u>				<Esc><C-r>i
+inoremap <C-a>				<Esc>gg<S-v>G
+
 noremap <C-u>				<C-r>
 noremap <C-p>				:!(open /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app)<CR>
-
 noremap <C-v>				p
 noremap <C-c>				y
 noremap <C-x>				x
