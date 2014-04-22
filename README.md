@@ -6,7 +6,7 @@ SubliVim
 Description et installation :
 -----------
 
-### Un vim avec quelques fonctionnalités supplémentaires : ######
+### Vim avec quelques fonctionnalités supplémentaires : ######
 1.	Vérification de fautes de code qui pourraient gêner la compilation
 2.	Activation de quelques raccourcis clavier
 3.	Check de la norme rapide et facile
