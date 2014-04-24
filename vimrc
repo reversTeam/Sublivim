@@ -21,6 +21,9 @@ let g:multi_cursor_start_key='<F6>'
 
 let g:current_path_for_nerd_init=expand('%:p:h')
 
+let g:ctrlp_map = '<C-f>'
+let g:ctrlp_cmd = 'CtrlP'
+
 call pathogen#infect()
 call pathogen#helptags()
 
