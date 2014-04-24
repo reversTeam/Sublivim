@@ -72,3 +72,5 @@ Liste des raccourcis Clavier
 12.	[tube](https://github.com/gcmt/tube.vim)
 13.	[twig](https://github.com/lunaru/vim-twig)
 14.	[multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+
+Site officiel : [www.sublivim.com](http://www.sublivim.com)
