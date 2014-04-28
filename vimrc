@@ -38,6 +38,7 @@ set cc=80
 set ts=4
 set t_Co=256
 set shiftwidth=4
+set cursorline
 
 set noswapfile
 
