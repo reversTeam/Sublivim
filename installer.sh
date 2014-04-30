@@ -20,4 +20,11 @@ else
 	ln -s .Sublivim/vimrc ~/.vimrc 
 	ln -s .Sublivim/vim ~/.vim
 fi
+
+XION=`cat $SHELL_ACTIVE | grep "stty -ixon"`
+
+if [ "$XION" == "" ]; then
+	echo "stty -ixon" >> $SHELL_ACTIVE
+fi
+
 cd - > /dev/null
