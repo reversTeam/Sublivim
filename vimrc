@@ -84,6 +84,12 @@ noremap <C-c>				y
 noremap <C-x>				x
 noremap <C-a>				gg<S-v>G
 
+noremap <silent>	<C-s>	:w!<CR>
+noremap <silent>	<C-q>	:qa<CR>
+
+inoremap <silent>	<C-s>	<Esc>:w!<CR>i
+inoremap <silent>	<C-q>	<Esc>:qa<CR>
+
 set autochdir
 
 set backspace=indent,eol,start
