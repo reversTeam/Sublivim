@@ -36,8 +36,6 @@ Liste des raccourcis Clavier
 9.	Ctrl + m     => Multi-cursors : Sauté l'occurrence
 10.	Echap        => Multi-cursors : Quitter le mode Multi-cursors
 11.	Ctrl + w     => Fermer sans enregistrer
-12.	Ctrl + s     => Sauvegarder
-13.	Ctrl + q     => Tout quitter
 
 ### Mode normal : ######
 1.	Ctrl + d     => Split vertical
