@@ -21,4 +21,11 @@ else
 	ln -s .Sublivim/vim ~/.vim
 fi
 
+SHELLRC=`cat $SHELL_ACTIVE | grep "source ~/.Sublivim/sublivimrc.sh"`
+
+if [ "$SHELLRC" == "" ]; then
+	echo "source ~/.Sublivim/sublivimrc.sh" >> $SHELL_ACTIVE
+	source $HOME/.Sublivim/sublivimrc.sh
+fi
+
 cd - > /dev/null
