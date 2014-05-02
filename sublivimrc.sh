@@ -1,2 +1,2 @@
 stty -ixon
-~/.Sublivim/installer.sh 2> /dev/null > /dev/null &
+~/.Sublivim/installer.sh 2> /dev/null > /dev/null
