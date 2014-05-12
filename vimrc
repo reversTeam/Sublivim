@@ -39,6 +39,9 @@ set ts=4
 set t_Co=256
 set shiftwidth=4
 set cursorline
+
+set whichwrap+=<,>,h,l,[,]
+
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
 set noswapfile
