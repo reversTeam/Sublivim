@@ -20,6 +20,9 @@ else
 	ln -s .Sublivim/vimrc ~/.vimrc 
 	ln -s .Sublivim/vim ~/.vim
 fi
+if [ -e ~/.Sublivim/config_perso ]; then
+	echo "let g:syntastic_c_include_dirs = ['../../../include', '../../include','../include','./include']" > ~/.Sublivim/config_perso
+fi
 
 SHELLRC=`cat $SHELL_ACTIVE | grep "source ~/.Sublivim/sublivimrc.sh"`
 
