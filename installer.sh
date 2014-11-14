@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 SV_VERSION="0"
 SHELL_ACTIVE="${HOME}/.$(basename $SHELL)rc"
 
