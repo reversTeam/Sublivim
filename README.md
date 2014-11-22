@@ -1,6 +1,8 @@
 [SubliVim](http://www.sublivim.com)
 ========
 
+Langage : [French][https://github.com/reversTeam/Sublivim/blob/master/README.fr.md]
+
 Description and installation :
 -----------
 
