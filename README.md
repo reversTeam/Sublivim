@@ -1,5 +1,7 @@
-[SubliVim](http://www.sublivim.com) | ![https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png](https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png)
+[SubliVim](http://www.sublivim.com)
 ========
+
+[![https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png][French]](https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png)
 
 Description and installation :
 -----------
