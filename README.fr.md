@@ -8,7 +8,7 @@ Description et installation :
 
 ![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
 
-Langue : [Anglais][https://github.com/reversTeam/Sublivim/blob/master/README.md]
+Langue : [Anglais](https://github.com/reversTeam/Sublivim/blob/master/README.md)
 
 ### Vim avec quelques fonctionnalités supplémentaires : ######
 1.	Vérification de fautes de code qui pourraient gêner la compilation
