@@ -1,69 +1,70 @@
 [SubliVim](http://www.sublivim.com)
 ========
 
+Description and installation :
+-----------
+
 ### Installation ######
 1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
 
 ![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
 
-Description et installation :
------------
-
-### Vim avec quelques fonctionnalités supplémentaires : ######
-1.	Vérification de fautes de code qui pourraient gêner la compilation
-2.	Activation de quelques raccourcis clavier
-3.	Check de la norme rapide et facile
-4.	Dossiers sur le coté
-5.	Visualisation facile et rapide des historiques de commande
+### Vim with a few more features : ######
+1.	Control of the code mistakes which could obstruct the compilation
+2.	Activation of keyboard shortcuts
+3.	Easy and quick check of the norm
+4.	Files on the side
+5.	Easy and quick display of the commands history
 6.	Autocompletion
-7.	Thème molokai
-8.	Gestion des switch plus simple
-9.	Gestion des onglets plus simple
-10.	Gestion du multi-cursors
+7.	Design molokai
+8.	Easier switch management
+9.	Easier tab management
+10.	Multi-cursors management
 
-Liste des raccourcis Clavier
+
+Keyboard shortcuts list : 
 ------------
 
-### Mode édition et normale : ######
-| Nº | Commande      | Action                                                   |
+### Editing and command : ######
+| Nº | Command       | Action                                                   |
 |:---|:--------------|:---------------------------------------------------------|
-| 1  | Ctrl + c      | Copier                                                   |
-| 2  | Ctrl + x      | Couper                                                   |
-| 3  | Ctrl + v      | Coller                                                   |
-| 4  | Ctrl + a      | Tout sélectionner                                        |
-| 5  | Ctrl + u      | Aller en avant dans l'historique des modifications       |
-| 6  | F6            | Entrer en mode Multi-cursors                             |
-| 7  | Ctrl + d      | Multi-cursors : Occurrence suivante                      |
-| 8  | Ctrl + p      | Multi-cursors : Occurrence précédente                    |
-| 9  | Ctrl + m      | Multi-cursors : Sauter l'Occurrence                      |
-| 10 | Echap         | Multi-cursors : Quitter le mode Multi-cursors            |
-| 11 | Ctrl + w      | Fermer sans enregistrer                                  
-| 12 | Ctrl + s      | Sauvegarder                                              |
-| 13 | Ctrl + q      | Quitter tous les fichiers ouvert                         |
+| 1  | Ctrl + c      | Copy                                                     |
+| 2  | Ctrl + x      | Cut                                                      |
+| 3  | Ctrl + v      | Paste                                                    |
+| 4  | Ctrl + a      | Select all                                               |
+| 5  | Ctrl + u      | Restore modifications                                    |
+| 6  | F6            | Multi-cursors mode                                       |
+| 7  | Ctrl + d      | Multi-cursors : Next occurrence                          |
+| 8  | Ctrl + p      | Multi-cursors : Previous occurrence                      |
+| 9  | Ctrl + m      | Multi-cursors : Skip the occurrence                      |
+| 10 | Echap         | Multi-cursors : Quit the Multi-cursors mode              |
+| 11 | Ctrl + w      | Close without saving                                     |
+| 12 | Ctrl + s      | Save                                                     |
+| 13 | Ctrl + q      | Quit the files opened                                    |
 
-### Mode normal : ######
-| Nº | Commande      | Action                                                   |
+### Command mode : ######
+| Nº | Command       | Action                                                   |
 |:---|:--------------|:---------------------------------------------------------|
-| 1  | Ctrl + d      | Split vertical                                           |
-| 2  | Maj + d       | Split horizontal                                         |
-| 3  | Ctrl + t      | Nouvel onglet                                            |
+| 1  | Ctrl + d      | Vertical split                                           |
+| 2  | Maj + d       | Horizontal split                                         |
+| 3  | Ctrl + t      | New tab                                                  |
 | 4  | Ctrl + n      | Check Norminator                                         |
-| 5  | Tab           | Onglet suivant                                           |
-| 6  | Maj + Tab     | Onglet Précédent                                         |
-| 7  | Ctrl + r      | Rechargement du fichier                                  |
-| 8  | Ctrl + g      | Afficher/Cacher Dossiers                                 |
-| 9  | Ctrl + k      | Appeler la règle make du Makefile                        |
-| 10 | Ctrl + h      | Afficher/Cacher l'historique des modifications           |
-| 11 | Space Space   | Afficher les configs de vim                              |
-| 12 | u             | Retourner en arrière dans l'historique des modifications |
-| 13 | Ctrl + u      | Aller en avant dans l'historique des modifications       |
-| 14 | Maj + gauche  | Switcher sur le split de gauche                          |
-| 15 | Maj + droite  | Switcher sur le split de droite                          |
-| 16 | Maj + haut    | Switcher sur le split du haut                            |
-| 17 | Maj + bas     | Switcher sur le split du bas                             |
-| 18 | Ctrl + p      | Lancement du lock session                                |
+| 5  | Tab           | Next tab                                                 |
+| 6  | Maj + Tab     | Previous tab                                             |
+| 7  | Ctrl + r      | File reload                                              |
+| 8  | Ctrl + g      | Display/Hide Files                                       |
+| 9  | Ctrl + k      | Run the rule make of the Makefile                        |
+| 10 | Ctrl + h      | Display/Hide modifications history                       |
+| 11 | Space Space   | Display vim configurations                               |
+| 12 | u             | Go back in the modifications history                     |
+| 13 | Ctrl + u      | Go forward in the modifications history                  |
+| 14 | Maj + gauche  | Switch on the left split                                 |
+| 15 | Maj + droite  | Switch on the right split                                |
+| 16 | Maj + haut    | Switch on the up split                                   |
+| 17 | Maj + bas     | Switch down the left split                               |
+| 18 | Ctrl + p      | Run the lock session                                     |
 
-### Liste des paquets installés ######
+### Installed package list ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
 2.	[autocomplpop](https://github.com/othree/vim-autocomplpop)
 3.	[gundo](https://github.com/sjl/gundo.vim)
@@ -79,4 +80,4 @@ Liste des raccourcis Clavier
 13.	[twig](https://github.com/lunaru/vim-twig)
 14.	[multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
-Site officiel : [www.sublivim.com](http://www.sublivim.com)
+Official website : [www.sublivim.com](http://www.sublivim.com)
