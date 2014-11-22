@@ -1,4 +1,4 @@
-[SubliVim](http://www.sublivim.com)
+[SubliVim](http://www.sublivim.com) | [Anglais](https://github.com/reversTeam/Sublivim/blob/master/README.md)
 ========
 
 Description et installation :
@@ -7,8 +7,6 @@ Description et installation :
 1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
 
 ![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
-
-Langue : [Anglais](https://github.com/reversTeam/Sublivim/blob/master/README.md)
 
 ### Vim avec quelques fonctionnalités supplémentaires : ######
 1.	Vérification de fautes de code qui pourraient gêner la compilation
