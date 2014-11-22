@@ -1,6 +1,9 @@
 [SubliVim](http://www.sublivim.com)
 ========
 
+### Installation ######
+1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
+
 ![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
 
 Description et installation :
@@ -18,9 +21,6 @@ Description et installation :
 9.	Gestion des onglets plus simple
 10.	Gestion du multi-cursors
 
-### Installation ######
-1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
-
 Liste des raccourcis Clavier
 ------------
 
@@ -37,7 +37,7 @@ Liste des raccourcis Clavier
 | 8  | Ctrl + p      | Multi-cursors : Occurrence précédente                    |
 | 9  | Ctrl + m      | Multi-cursors : Sauter l'Occurrence                      |
 | 10 | Echap         | Multi-cursors : Quitter le mode Multi-cursors            |
-| 11 | Ctrl + w      | Fermer sans enregistrer                                  |
+| 11 | Ctrl + w      | Fermer sans enregistrer                                  
 | 12 | Ctrl + s      | Sauvegarder                                              |
 | 13 | Ctrl + q      | Quitter tous les fichiers ouvert                         |
 
