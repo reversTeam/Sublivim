@@ -1,7 +1,7 @@
 [SubliVim](http://www.sublivim.com)
 ========
 
-[![https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png][French]](https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png)
+[![https://raw.githubusercontent.com/reversTeam/Sublivim/master/Pictures/language/fr.png]](https://github.com/reversTeam/Sublivim/blob/master/README.fr.md)
 
 Description and installation :
 -----------
