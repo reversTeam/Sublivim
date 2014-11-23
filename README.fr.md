@@ -1,4 +1,4 @@
-[SubliVim](http://www.sublivim.com) | [Anglais](https://github.com/reversTeam/Sublivim/blob/master/README.md)
+[SubliVim](http://www.sublivim.com)
 ========
 
 [![English](Pictures/language/en.png)](README.md)
