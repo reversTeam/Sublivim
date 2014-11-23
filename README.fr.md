@@ -1,6 +1,8 @@
 [SubliVim](http://www.sublivim.com) | [Anglais](https://github.com/reversTeam/Sublivim/blob/master/README.md)
 ========
 
+[![Pictures/language/en.png](Anglais)](README.md)
+
 Description et installation :
 -----------
 ### Installation ######
