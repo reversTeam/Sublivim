@@ -1,7 +1,7 @@
 [SubliVim](http://www.sublivim.com)
 ========
 
-[![English](Pictures/language/en.png)](README.md)
+[![English](Pictures/language/en.png)](README.md) <-
 
 Description et installation :
 -----------
