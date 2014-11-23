@@ -60,10 +60,10 @@ Keyboard shortcuts list :
 | 11 | Space Space   | Display vim configurations                               |
 | 12 | u             | Go back in the modifications history                     |
 | 13 | Ctrl + u      | Go forward in the modifications history                  |
-| 14 | Maj + gauche  | Switch on the left split                                 |
-| 15 | Maj + droite  | Switch on the right split                                |
-| 16 | Maj + haut    | Switch on the up split                                   |
-| 17 | Maj + bas     | Switch down the left split                               |
+| 14 | Maj + left    | Switch on the left split                                 |
+| 15 | Maj + right   | Switch on the right split                                |
+| 16 | Maj + up      | Switch on the up split                                   |
+| 17 | Maj + down    | Switch on the down split                                 |
 | 18 | Ctrl + p      | Run the lock session                                     |
 
 ### Installed package list ######
