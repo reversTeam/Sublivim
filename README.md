@@ -1,5 +1,3 @@
-[![Linkedin](Pictures/share/in.png)](www.linkedin.com/pub/théotime-rivière/68/313/216/) [![Twitter](Pictures/share/t.png)](https://twitter.com/Sublivim)
-
 [SubliVim](http://www.sublivim.com)
 ========
 
@@ -85,3 +83,5 @@ Keyboard shortcuts list :
 14.	[multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
 Official website : [www.sublivim.com](http://www.sublivim.com)
+Linkedin : [![Linkedin](Pictures/share/in.png)](www.linkedin.com/pub/théotime-rivière/68/313/216/)
+Twitter : [![Twitter](Pictures/share/t.png)](https://twitter.com/Sublivim)
