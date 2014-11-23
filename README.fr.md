@@ -1,8 +1,8 @@
 [SubliVim](http://www.sublivim.com)
 ========
+
 [![English](Pictures/language/en.png)](README.md)
-Description et installation :
------------
+
 ### Installation ######
 1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
 

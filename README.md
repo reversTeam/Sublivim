@@ -3,9 +3,6 @@
 
 [![Francais](Pictures/language/fr.png)](README.fr.md)
 
-Description and installation :
------------
-
 ### Installation ######
 1.	`curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
 
