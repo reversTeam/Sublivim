@@ -1,4 +1,4 @@
-[SubliVim](http://www.sublivim.com)
+[SubliVim](http://www.sublivim.com) [![Linkedin](Pictures/share/in.png)](www.linkedin.com/pub/théotime-rivière/68/313/216/) [![Twitter](Pictures/share/t.png)](https://twitter.com/Sublivim)
 ========
 
 [![Francais](Pictures/language/fr.png)](README.fr.md)
