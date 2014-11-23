@@ -81,5 +81,4 @@ Liste des raccourcis Clavier
 14.	[multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
 Site officiel : [www.sublivim.com](http://www.sublivim.com)
-Linkedin : [![Linkedin](Pictures/share/in.png)](www.linkedin.com/pub/théotime-rivière/68/313/216/)
-Twitter : [![Twitter](Pictures/share/t.png)](https://twitter.com/Sublivim)
+->[![Linkedin](Pictures/share/in.png)](www.linkedin.com/pub/théotime-rivière/68/313/216/) [![Twitter](Pictures/share/t.png)](https://twitter.com/Sublivim)<-
