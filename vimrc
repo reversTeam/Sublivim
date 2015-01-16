@@ -98,8 +98,8 @@ noremap <silent>	<C-q>	:qa<CR>
 inoremap <silent>	<C-s>	<Esc>:w!<CR>
 inoremap <silent>	<C-q>	<Esc>:qa<CR>
 
-vnoremap <Tab>				><CR>
-vnoremap <S-Tab>			<<CR>
+vnoremap <Tab>				>
+vnoremap <S-Tab>			<
 
 set autochdir
 
