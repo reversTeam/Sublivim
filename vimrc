@@ -1,7 +1,5 @@
 set nocompatible
 
-source ~/.Sublivim/config_perso
-
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
@@ -134,3 +132,5 @@ function! s:CloseIfOnlyNerdTreeLeft()
 		endif
 	endif
 endfunction
+
+source ~/.Sublivim/config_perso
