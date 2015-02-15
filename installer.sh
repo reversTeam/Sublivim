@@ -30,7 +30,7 @@ fi
 
 SBVRC="$HOME/.Sublivim/sublivimrc.sh"
 
-if ! null cat $SHELL_ACTIVE | grep "source $SBVRC"; then
+if ! cat $SHELL_ACTIVE | grep "source $SBVRC" >/dev/null; then
 	echo "source $SBVRC" >> $SHELL_ACTIVE
 	. $SBVRC
 fi
