@@ -9,6 +9,9 @@
 
 ![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
 
+### uninstall ######
+`cd ~ && ./.Sublivim/uninstall && cd -`
+
 ### Vim with a few more features : ######
 1.	Control of the code mistakes which could obstruct the compilation
 2.	Activation of keyboard shortcuts
