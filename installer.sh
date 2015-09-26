@@ -21,8 +21,8 @@ else
 	fi
 
 	echo "Installation du Sublivim"
-	ln -s .Sublivim/vimrc ~/.vimrc
-	ln -s .Sublivim/vim ~/.vim
+	ln -s .Sublivim/vimrc $HOME/.vimrc
+	ln -s .Sublivim/vim $HOME/.vim
 fi
 if [ ! -e ~/.Sublivim/config_perso ]; then
 	echo "let g:syntastic_c_include_dirs = ['../../../include', '../../include','../include','./include']" > ~/.Sublivim/config_perso
