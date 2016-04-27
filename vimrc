@@ -3,6 +3,29 @@ set nocompatible
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" Variable configuration for Sublivim
+let sbv_theme='molokai'
+" Open NERDTree with vim
+let sbv_open_nerdtree_to_start=1
+" Open Nerd Panel with a new tab
+let sbv_open_nerdtree_with_new_tab=1
+" Enabled / Disabled placeholder chars
+let sbv_display_placeholder=1
+" Charactere placeholder for tabulation [2 char]
+let sbv_tab_placeholder='»·'
+" Charactere placeholder for space [1 char]
+let sbv_space_placeholder='·'
+" Enabled / Disabled space space for access in your vimrc
+let sbv_quick_access_config=0
+" Enabled / Disabled swap file
+let sbv_swap_file=0
+" Enabled / Disabled Shortcut
+let sbv_smart_shortcut=1
+" Indentation type [tab || space]
+let sbv_indentation_type="tab"
+" Indentation length
+let sbv_indentation_length=4
+
 let g:tube_terminal = "xterm"
 let current_compiler = "gcc"
 
@@ -12,6 +35,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_c_remove_include_errors = 1
 let g:syntastic_c_include_dirs = ['../../../include', '../../include','../include','./include']
 
 let g:gundo_width = 60
@@ -32,51 +56,26 @@ let g:ctrlp_cmd = 'CtrlP'
 call pathogen#infect()
 call pathogen#helptags()
 
-syntax on
-colorscheme molokai
-
 set encoding=utf-8
 set mouse=a
 set ai
 set nu
 set cc=80
-set ts=4
 set t_Co=256
-set shiftwidth=4
-set cursorline
 
+set cursorline
 set whichwrap+=<,>,h,l,[,]
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
-set noswapfile
-
 set splitright
-
-set list listchars=tab:»·,trail:·
-
-noremap <Space><Space>		:tabedit ~/.vimrc<CR>
 
 noremap <C-h> :GundoToggle<CR>
 
-noremap <C-w>				:q!<CR>
-noremap <S-Tab>				:tabprevious<CR>
-noremap <Tab>				:tabnext<CR>
-noremap <C-r>				:NERDTreeToggle<CR>:e<CR>:NERDTreeToggle<CR>
-noremap <C-d>				:vs 
-noremap <S-d>				:split 
-noremap <C-t>				:tabedit 
 noremap <C-k>				:!(make)<CR>
 noremap <C-g>				:NERDTreeToggle<CR>
 
-inoremap <C-w>				<Esc>:q!<CR>
 inoremap <C-k>				<Esc>:help key-notation<CR>
-inoremap <C-t>				<Esc>:tabedit 
-
-noremap <S-Right>			<C-w><Right>
-noremap <S-Left>			<C-w><Left>
-noremap <S-Up>				<C-w><Up>
-noremap <S-Down>			<C-w><Down>
 
 inoremap <C-v>				<Esc>pi
 inoremap <C-c>				<Esc>yi
@@ -92,33 +91,87 @@ noremap <C-c>				y
 noremap <C-x>				x
 noremap <C-a>				gg<S-v>G
 
-noremap <silent>	<C-s>	:w!<CR>
-noremap <silent>	<C-q>	:qa<CR>
-
-inoremap <silent>	<C-s>	<Esc>:w!<CR>
-inoremap <silent>	<C-q>	<Esc>:qa<CR>
-
-vnoremap <Tab>				>
-vnoremap <S-Tab>			<
-
 set autochdir
 
 set backspace=indent,eol,start
 
-autocmd VimEnter * call s:actionForOpen()
-function! s:actionForOpen()
+source ~/.Sublivim/config_perso
+
+execute "set tabstop=". sbv_indentation_length
+execute "set shiftwidth=". sbv_indentation_length
+execute "set softtabstop=". sbv_indentation_length
+
+if sbv_indentation_type == "space"
+	set expandtab
+endif
+
+
+if !empty(sbv_smart_shortcut)
+	noremap <C-w>				:q!<CR>
+	inoremap <C-w>				<Esc>:q!<CR>
+
+	noremap <S-Tab>				:tabprevious<CR>
+	noremap <Tab>				:tabnext<CR>
+	noremap <C-r>				:NERDTreeToggle<CR>:e<CR>:NERDTreeToggle<CR>
+
+	noremap <C-d>				:vs 
+	noremap <S-d>				:split 
+	noremap <C-t>				:tabedit 
+	inoremap <C-t>				<Esc>:tabedit 
+
+	noremap <S-Right>			<C-w><Right>
+	noremap <S-Left>			<C-w><Left>
+	noremap <S-Up>				<C-w><Up>
+	noremap <S-Down>			<C-w><Down>
+	noremap <silent>	<C-s>	:w!<CR>
+	noremap <silent>	<C-q>	:qa<CR>
+
+	noremap +		:vertical resize +1<CR>
+	noremap -		:vertical resize -1<CR>
+	noremap =		<C-w>=
+
+	inoremap <silent>	<C-s>	<Esc>:w!<CR>
+	inoremap <silent>	<C-q>	<Esc>:qa<CR>
+
+	vnoremap <Tab>				>
+	vnoremap <S-Tab>			<
+endif
+
+if !empty(sbv_quick_access_config)
+	noremap <Space><Space>		:tabedit ~/.vimrc<CR>
+endif
+
+syntax on
+if !empty(sbv_theme)
+	execute "colorscheme ".  sbv_theme
+endif
+
+if empty(sbv_swap_file)
+	set noswapfile
+endif
+
+if !empty(sbv_display_placeholder)
+	execute "set list listchars=tab:". sbv_tab_placeholder .",trail:". sbv_space_placeholder
+endif
+
+autocmd VimEnter * call s:actionForOpen(sbv_open_nerdtree_to_start)
+function! s:actionForOpen(openNerdTree)
 	let filename = expand('%:t')
-	NERDTree
+	if !empty(a:openNerdTree)
+		NERDTree
+	endif
 	if !empty(filename)
 		wincmd l
 	endif
 endfunction
 
-autocmd BufCreate * call s:addingNewTab()
-function! s:addingNewTab()
+autocmd BufCreate * call s:addingNewTab(sbv_open_nerdtree_with_new_tab)
+function! s:addingNewTab(openNerdTree)
 	let filename = expand('%:t')
 	if winnr('$') < 2 && exists('t:NERDTreeBufName') == 0
-		NERDTree
+		if !empty(a:openNerdTree)
+			NERDTree
+		endif
 		if !empty(filename)
 			wincmd l
 		endif
@@ -136,4 +189,3 @@ function! s:CloseIfOnlyNerdTreeLeft()
 	endif
 endfunction
 
-source ~/.Sublivim/config_perso
