@@ -128,7 +128,7 @@ if !empty(sbv_smart_shortcut)
 
 	noremap +		:vertical resize +1<CR>
 	noremap -		:vertical resize -1<CR>
-	noremap =		<C-w>=
+	noremap ~		<C-w>=
 
 	inoremap <silent>	<C-s>	<Esc>:w!<CR>
 	inoremap <silent>	<C-q>	<Esc>:qa<CR>
