@@ -25,47 +25,47 @@
 10.	Multi-cursors management
 
 
-Keyboard shortcuts list : 
+Keyboard shortcuts list :
 ------------
 
 ### Editing and command : ######
-| Nº | Command       | Action                                                   |
-|:---|:--------------|:---------------------------------------------------------|
-| 1  | Ctrl + c      | Copy                                                     |
-| 2  | Ctrl + x      | Cut                                                      |
-| 3  | Ctrl + v      | Paste                                                    |
-| 4  | Ctrl + a      | Select all                                               |
-| 5  | Ctrl + u      | Restore modifications                                    |
-| 6  | F6            | Multi-cursors mode                                       |
-| 7  | Ctrl + d      | Multi-cursors : Next occurrence                          |
-| 8  | Ctrl + p      | Multi-cursors : Previous occurrence                      |
-| 9  | Ctrl + m      | Multi-cursors : Skip the occurrence                      |
-| 10 | Echap         | Multi-cursors : Quit the Multi-cursors mode              |
-| 11 | Ctrl + w      | Close without saving                                     |
-| 12 | Ctrl + s      | Save                                                     |
-| 13 | Ctrl + q      | Quit the files opened                                    |
+| Nº | Command                             | Action                                                   |
+|:---|:------------------------------------|:---------------------------------------------------------|
+| 1  | <kbd>CTRL</kbd> + <kbd>C</kbd>      | Copy                                                     |
+| 2  | <kbd>CTRL</kbd> + <kbd>X</kbd>      | Cut                                                      |
+| 3  | <kbd>CTRL</kbd> + <kbd>V</kbd>      | Paste                                                    |
+| 4  | <kbd>CTRL</kbd> + <kbd>A</kbd>      | Select all                                               |
+| 5  | <kbd>CTRL</kbd> + <kbd>U</kbd>      | Restore modifications                                    |
+| 6  | <kbd>F6</kbd>                       | Multi-cursors mode                                       |
+| 7  | <kbd>CTRL</kbd> + <kbd>D</kbd>      | Multi-cursors : Next occurrence                          |
+| 8  | <kbd>CTRL</kbd> + <kbd>P</kbd>      | Multi-cursors : Previous occurrence                      |
+| 9  | <kbd>CTRL</kbd> + <kbd>M</kbd>      | Multi-cursors : Skip the occurrence                      |
+| 10 | <kbd>ESC</kbd>                      | Multi-cursors : Quit the Multi-cursors mode              |
+| 11 | <kbd>CTRL</kbd> + <kbd>W</kbd>      | Close without saving                                     |
+| 12 | <kbd>CTRL</kbd> + <kbd>S</kbd>      | Save                                                     |
+| 13 | <kbd>CTRL</kbd> + <kbd>Q</kbd>      | Quit the files opened                                    |
 
 ### Command mode : ######
-| Nº | Command       | Action                                                   |
-|:---|:--------------|:---------------------------------------------------------|
-| 1  | Ctrl + d      | Vertical split                                           |
-| 2  | Maj + d       | Horizontal split                                         |
-| 3  | Ctrl + t      | New tab                                                  |
-| 4  | Ctrl + n      | Check Norminator                                         |
-| 5  | Tab           | Next tab                                                 |
-| 6  | Maj + Tab     | Previous tab                                             |
-| 7  | Ctrl + r      | File reload                                              |
-| 8  | Ctrl + g      | Display/Hide Files                                       |
-| 9  | Ctrl + k      | Run the rule make of the Makefile                        |
-| 10 | Ctrl + h      | Display/Hide modifications history                       |
-| 11 | Space Space   | Display vim configurations                               |
-| 12 | u             | Go back in the modifications history                     |
-| 13 | Ctrl + u      | Go forward in the modifications history                  |
-| 14 | Maj + left    | Switch on the left split                                 |
-| 15 | Maj + right   | Switch on the right split                                |
-| 16 | Maj + up      | Switch on the up split                                   |
-| 17 | Maj + down    | Switch on the down split                                 |
-| 18 | Ctrl + p      | Run the lock session                                     |
+| Nº | Command                             | Action                                                   |
+|:---|:------------------------------------|:---------------------------------------------------------|
+| 1  | <kbd>CTRL</kbd> + <kbd>D</kbd>      | Vertical split                                           |
+| 2  | <kbd>SHIFT</kbd> + <kbd>D</kbd>     | Horizontal split                                         |
+| 3  | <kbd>CTRL</kbd> + <kbd>T</kbd>      | New tab                                                  |
+| 4  | <kbd>CTRL</kbd> + <kbd>N</kbd>      | Check Norminator                                         |
+| 5  | <kbd>TAB</kbd>                      | Next tab                                                 |
+| 6  | <kbd>SHIFT</kbd> + <kbd>TAB</kbd>   | Previous tab                                             |
+| 7  | <kbd>CTRL</kbd> + <kbd>R</kbd>      | File reload                                              |
+| 8  | <kbd>CTRL</kbd> + <kbd>G</kbd>      | Display/Hide Files                                       |
+| 9  | <kbd>CTRL</kbd> + <kbd>K</kbd>      | Run the rule make of the Makefile                        |
+| 10 | <kbd>CTRL</kbd> + <kbd>H</kbd>      | Display/Hide modifications history                       |
+| 11 | <kbd>SPACE</kbd> <kbd>SPACE</kbd>   | Display vim configurations                               |
+| 12 | <kbd>U</kbd>                        | Go back in the modifications history                     |
+| 13 | <kbd>CTRL</kbd> + <kbd>U</kbd>      | Go forward in the modifications history                  |
+| 14 | <kbd>SHIFT</kbd> + <kbd>←</kbd>     | Switch on the left split                                 |
+| 15 | <kbd>SHIFT</kbd> + <kbd>→</kbd>     | Switch on the right split                                |
+| 16 | <kbd>SHIFT</kbd> + <kbd>↑</kbd>     | Switch on the up split                                   |
+| 17 | <kbd>SHIFT</kbd> + <kbd>↓</kbd>     | Switch on the down split                                 |
+| 18 | <kbd>CTRL</kbd> + <kbd>P</kbd>      | Run the lock session                                     |
 
 ### Installed package list ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
