@@ -24,47 +24,47 @@
 9.	Gestion des onglets plus simple
 10.	Gestion du multi-cursors
 
-Liste des raccourcis Clavier
+Liste des raccourcis Clavier :
 ------------
 
 ### Mode édition et commande : ######
-| Nº | Commande      | Action                                                   |
-|:---|:--------------|:---------------------------------------------------------|
-| 1  | Ctrl + c      | Copier                                                   |
-| 2  | Ctrl + x      | Couper                                                   |
-| 3  | Ctrl + v      | Coller                                                   |
-| 4  | Ctrl + a      | Tout sélectionner                                        |
-| 5  | Ctrl + u      | Aller en avant dans l'historique des modifications       |
-| 6  | F6            | Entrer en mode Multi-cursors                             |
-| 7  | Ctrl + d      | Multi-cursors : Occurrence suivante                      |
-| 8  | Ctrl + p      | Multi-cursors : Occurrence précédente                    |
-| 9  | Ctrl + m      | Multi-cursors : Sauter l'Occurrence                      |
-| 10 | Echap         | Multi-cursors : Quitter le mode Multi-cursors            |
-| 11 | Ctrl + w      | Fermer sans enregistrer                                  |
-| 12 | Ctrl + s      | Sauvegarder                                              |
-| 13 | Ctrl + q      | Quitter tous les fichiers ouvert                         |
+| Nº | Commande                            | Action                                                   |
+|:---|:------------------------------------|:---------------------------------------------------------|
+| 1  | <kbd>Ctrl</kbd> + <kbd>c</kbd>      | Copier                                                   |
+| 2  | <kbd>Ctrl</kbd> + <kbd>x</kbd>      | Couper                                                   |
+| 3  | <kbd>Ctrl</kbd> + <kbd>v</kbd>      | Coller                                                   |
+| 4  | <kbd>Ctrl</kbd> + <kbd>a</kbd>      | Tout sélectionner                                        |
+| 5  | <kbd>Ctrl</kbd> + <kbd>u</kbd>      | Aller en avant dans l'historique des modifications       |
+| 6  | <kbd>F6</kbd>                       | Entrer en mode Multi-cursors                             |
+| 7  | <kbd>Ctrl</kbd> + <kbd>d</kbd>      | Multi-cursors : Occurrence suivante                      |
+| 8  | <kbd>Ctrl</kbd> + <kbd>p</kbd>      | Multi-cursors : Occurrence précédente                    |
+| 9  | <kbd>Ctrl</kbd> + <kbd>m</kbd>      | Multi-cursors : Sauter l'Occurrence                      |
+| 10 | <kbd>Echap</kbd>                    | Multi-cursors : Quitter le mode Multi-cursors            |
+| 11 | <kbd>Ctrl</kbd> + <kbd>w</kbd>      | Fermer sans enregistrer                                  |
+| 12 | <kbd>Ctrl</kbd> + <kbd>s</kbd>      | Sauvegarder                                              |
+| 13 | <kbd>Ctrl</kbd> + <kbd>q</kbd>      | Quitter tous les fichiers ouvert                         |
 
 ### Mode commande : ######
-| Nº | Commande      | Action                                                   |
-|:---|:--------------|:---------------------------------------------------------|
-| 1  | Ctrl + d      | Split vertical                                           |
-| 2  | Maj + d       | Split horizontal                                         |
-| 3  | Ctrl + t      | Nouvel onglet                                            |
-| 4  | Ctrl + n      | Check Norminator                                         |
-| 5  | Tab           | Onglet suivant                                           |
-| 6  | Maj + Tab     | Onglet Précédent                                         |
-| 7  | Ctrl + r      | Rechargement du fichier                                  |
-| 8  | Ctrl + g      | Afficher/Cacher Dossiers                                 |
-| 9  | Ctrl + k      | Appeler la règle make du Makefile                        |
-| 10 | Ctrl + h      | Afficher/Cacher l'historique des modifications           |
-| 11 | Space Space   | Afficher les configs de vim                              |
-| 12 | u             | Retourner en arrière dans l'historique des modifications |
-| 13 | Ctrl + u      | Aller en avant dans l'historique des modifications       |
-| 14 | Maj + gauche  | Switcher sur le split de gauche                          |
-| 15 | Maj + droite  | Switcher sur le split de droite                          |
-| 16 | Maj + haut    | Switcher sur le split du haut                            |
-| 17 | Maj + bas     | Switcher sur le split du bas                             |
-| 18 | Ctrl + p      | Lancement du lock session                                |
+| Nº | Commande                            | Action                                                   |
+|:---|:------------------------------------|:---------------------------------------------------------|
+| 1  | <kbd>Ctrl</kbd> + <kbd>d</kbd>      | Split vertical                                           |
+| 2  | <kbd>Maj</kbd> + <kbd>d</kbd>       | Split horizontal                                         |
+| 3  | <kbd>Ctrl</kbd> + <kbd>t</kbd>      | Nouvel onglet                                            |
+| 4  | <kbd>Ctrl</kbd> + <kbd>n</kbd>      | Check Norminator                                         |
+| 5  | <kbd>Tab</kbd>                      | Onglet suivant                                           |
+| 6  | <kbd>Maj</kbd> + <kbd>Tab</kbd>     | Onglet Précédent                                         |
+| 7  | <kbd>Ctrl</kbd> + <kbd>r</kbd>      | Rechargement du fichier                                  |
+| 8  | <kbd>Ctrl</kbd> + <kbd>g</kbd>      | Afficher/Cacher Dossiers                                 |
+| 9  | <kbd>Ctrl</kbd> + <kbd>k</kbd>      | Appeler la règle make du Makefile                        |
+| 10 | <kbd>Ctrl</kbd> + <kbd>h</kbd>      | Afficher/Cacher l'historique des modifications           |
+| 11 | <kbd>Space</kbd> <kbd>Space</kbd>   | Afficher les configs de vim                              |
+| 12 | <kbd>u</kbd>                        | Retourner en arrière dans l'historique des modifications |
+| 13 | <kbd>Ctrl</kbd> + <kbd>u</kbd>      | Aller en avant dans l'historique des modifications       |
+| 14 | <kbd>Maj</kbd> + <kbd>gauche</kbd>  | Switcher sur le split de gauche                          |
+| 15 | <kbd>Maj</kbd> + <kbd>droite</kbd>  | Switcher sur le split de droite                          |
+| 16 | <kbd>Maj</kbd> + <kbd>haut</kbd>    | Switcher sur le split du haut                            |
+| 17 | <kbd>Maj</kbd> + <kbd>bas</kbd>     | Switcher sur le split du bas                             |
+| 18 | <kbd>Ctrl</kbd> + <kbd>p</kbd>      | Lancement du lock session                                |
 
 ### Liste des paquets installés ######
 1.	[addon_mw_utils](https://github.com/marcweber/vim-addon-mw-utils)
