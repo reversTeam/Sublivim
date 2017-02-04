@@ -25,6 +25,8 @@ let sbv_smart_shortcut=1
 let sbv_indentation_type="tab"
 " Indentation length
 let sbv_indentation_length=4
+" Relative numbers
+let sbv_enable_numbers=1
 
 let g:tube_terminal = "xterm"
 let current_compiler = "gcc"
@@ -153,6 +155,8 @@ endif
 if !empty(sbv_display_placeholder)
 	execute "set list listchars=tab:". sbv_tab_placeholder .",trail:". sbv_space_placeholder
 endif
+
+let g:enable_numbers = sbv_enable_numbers
 
 autocmd VimEnter * call s:actionForOpen(sbv_open_nerdtree_to_start)
 function! s:actionForOpen(openNerdTree)
