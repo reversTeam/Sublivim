@@ -5,7 +5,8 @@
 
 ### Installation ######
 1.  `curl -L http://install.ohmyz.sh | sh`
-2.	`curl http://install.sublivim.com | sh`
+2.	`curl http://install.sublivim.com | sh` || `curl https://raw.githubusercontent.com/reversTeam/Sublivim/master/installer.sh | sh`
+
 
 ![Sublivim](https://raw.github.com/reversTeam/Sublivim/master/Pictures/vim.jpg)
 
