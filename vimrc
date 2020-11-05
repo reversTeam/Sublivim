@@ -98,6 +98,7 @@ set autochdir
 set backspace=indent,eol,start
 
 source ~/.Sublivim/config_perso
+source ~/.Sublivim/swipe_lines.vimrc
 
 execute "set tabstop=". sbv_indentation_length
 execute "set shiftwidth=". sbv_indentation_length
