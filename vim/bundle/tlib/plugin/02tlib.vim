@@ -106,7 +106,7 @@ command! -nargs=1 -complete=command TBrowseOutput call tlib#cmd#BrowseOutput(<q-
 "
 " EXAMPLES: >
 "   TBrowseScriptnames 
-command! -nargs=0 -complete=command TBrowseScriptnames call
+command! -nargs=0 TBrowseScriptnames call
             \ tlib#cmd#BrowseOutputWithCallback("tlib#cmd#ParseScriptname", "scriptnames")
 
 " :display: :TTimeCommand CMD
